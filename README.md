@@ -6,4 +6,10 @@ API Reference: localhost:8082/retail/catalog
 
 Instructions: Below are the libraries which were needed to setup this project: Spring: 3.2.13.RELEASE Hibernate: 3.6.9.Final java: 1.7 Mysql: 5.7 Maven 3.0.3
 
-The service includes: 1. Object oriented, domain driven, service oriented 1. Desgined Restful service. 2. Framework used: Spring, Hibernate 3. It is a self sufficient project that can be built, deployed. 4. Used Dsign pattern: Visitor (As it is generally used topayment at one place in ecommerce platform) 5. Spring Security is included to make applciation secured.
+The service includes: 
+1. Object oriented, domain driven, service oriented 
+2. Desgined Restful service. 
+3. Framework used: Spring, Hibernate 
+4. It is a self sufficient project that can be built, deployed. 
+5. Used Design pattern: Visitor (As it is generally used to perform product specific payment calculation at one place) 
+6. Spring Security is included to make applciation secured.
