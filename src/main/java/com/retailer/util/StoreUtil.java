@@ -68,7 +68,7 @@ public class StoreUtil
 											  categoryBO.getCategoryById(product.getCategoryId()).getTaxPercentage()
 											  );
 			ProductCategory category = categoryBO.getCategoryById(product.getCategoryId());
-			dto.setTotalAmount(product.accept(visitor, category));
+			dto.setTotalAmount(product.accept(visitor, category, cart.get(product)));
 			cartBillDTOList.add(dto);
 		}
 		double totalPayableAmount=0.0;

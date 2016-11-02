@@ -72,7 +72,6 @@ public class RetailController {
 			@ModelAttribute("myCart") Map<ProductEntity,Integer> myCart)
 	{
 		ProductEntity product = productBO.getProductById(productId);
-		product.setQuantity(Integer.parseInt(quantity));
 		
 		if(myCart.containsKey(product))
 			myCart.put(product, myCart.get(product)+Integer.parseInt(quantity));

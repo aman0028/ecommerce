@@ -23,12 +23,10 @@ public class ProductDAO
 	
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly=true)
-	public List<ProductEntity> getProductByLocale(String locale) {
+	public List<ProductEntity> getProducts() {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(ProductEntity.class);
 		criteria.add(Restrictions.eq("status", "A"));
-		if(StringUtils.isNotBlank(locale))
-		  criteria.add(Restrictions.eq("status",locale));
 		return criteria.list();
 	}
 

@@ -5,6 +5,6 @@ import com.retailer.entity.ProductEntity;
 
 public interface ShoppingCartVisitor 
 {
-	public double visit(ProductEntity product, ProductCategory category);
+	public double visit(ProductEntity product, ProductCategory category, Integer quantity);
 
 }

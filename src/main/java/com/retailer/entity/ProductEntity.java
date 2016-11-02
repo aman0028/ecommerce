@@ -33,9 +33,6 @@ public class ProductEntity implements ItemElement, Serializable {
 
 	@Column(name = "category_id")
 	private String categoryId;
-	
-	@Transient
-	private Integer quantity;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "product_id")
@@ -66,14 +63,6 @@ public class ProductEntity implements ItemElement, Serializable {
 
 	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
-	}
-
-	public Integer getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
 	}
 
 	@Transient
@@ -170,7 +159,7 @@ public class ProductEntity implements ItemElement, Serializable {
 		return true;
 	}
 
-	public double accept(ShoppingCartVisitor shoppingCartVisitor, ProductCategory category) {
-		return shoppingCartVisitor.visit(this, category);
+	public double accept(ShoppingCartVisitor shoppingCartVisitor, ProductCategory category, Integer quantity) {
+		return shoppingCartVisitor.visit(this, category, quantity);
 	}
 }

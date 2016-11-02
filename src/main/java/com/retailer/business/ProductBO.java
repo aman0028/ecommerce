@@ -18,7 +18,7 @@ public class ProductBO
 	
 	public List<ProductEntity> getProducts(String locale) 
 	{
-		return productDAO.getProductByLocale(locale);
+		return productDAO.getProducts();
 	}
 
 	public ProductEntity getProductById(String productId) 
